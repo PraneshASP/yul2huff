@@ -1,0 +1,271 @@
+@import url("https://fonts.googleapis.com/css2?family=Reenie+Beanie&family=Roboto+Mono&family=Share+Tech+Mono&display=swap");
+
+:root {
+  --main-bg-color: #000;
+  --main-text-color: #fff;
+  --terminal-bg-color: #111;
+  --terminal-border-color: #444;
+  --terminal-text-color: #fff;
+  --terminal-placeholder-color: #2d363d;
+  --terminal-padding: 10px;
+  --terminal-width: 656px;
+
+  --terminal-max-width: 90vw;
+  --border-radius:10px;
+
+  --chisel-green: #59b33c;
+  --chisel-yellow: #dfce65;
+  --chisel-cyan: #6bd1c7;
+}
+
+* {
+  box-sizing: border-box;
+  outline: none;
+}
+
+html {
+  height: 100vh;
+  background: var(--main-bg-color);
+  background: radial-gradient(
+    circle at 24.1% 68.8%,
+    rgb(50, 50, 50) 0%,
+    rgb(0, 0, 0) 99.4%
+  );
+  background-attachment: fixed;
+  font-family: "Roboto Mono", monospace;
+}
+
+body {
+  margin: 0 auto;
+  color: var(--main-text-color);
+}
+
+div#root{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-left {
+  flex: 1;
+  justify-content: right;
+}
+
+.header-left-img {
+  height: auto;
+  width: auto;
+  max-width: 96px;
+  max-height: 96px;
+  margin-left: 48px;
+  margin-top: 16px;
+  filter: drop-shadow(0px 0px 12px rgba(49, 164, 160, 0.5));
+}
+
+.header-center {
+  flex: 1;
+  text-align: center;
+}
+
+.header-right {
+  flex: 1;
+  text-align: right;
+}
+
+h1 {
+  margin-bottom: -10px;
+  font-size: 2.5rem;
+  color: var(--main-text-color);
+  text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #0ff, 0 0 42px #0ff,
+    0 0 82px #0ff;
+}
+
+h2 {
+  margin: 5px 0;
+}
+
+h5 {
+  font-family: "Reenie Beanie", cursive;
+  font-size: 2rem;
+  margin: 0;
+  margin-left: 5rem;
+  transform: rotate(-10deg);
+}
+
+.main {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: start;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 16px;
+}
+
+.textarea-terminal {
+  background: var(--terminal-bg-color);
+  border: 1px solid var(--terminal-border-color);
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
+  padding: var(--terminal-padding);
+  color: var(--terminal-text-color);
+  width: var(--terminal-width);
+  max-width: var(--terminal-max-width);
+  height: 6rem;
+  font-family: "Roboto Mono", monospace;
+}
+
+.textarea-terminal::placeholder {
+  color: var(--terminal-placeholder-color);
+}
+
+.tx-params {
+  margin: 16px;
+  width: var(--terminal-width);
+  max-width: var(--terminal-max-width);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.tx-params input{
+  background: var(--terminal-bg-color);
+  border: 1px solid var(--terminal-border-color);
+  font-family: "Roboto Mono", monospace;
+  width: calc(50% - 8px);
+  padding: var(--terminal-padding);
+  color: var(--terminal-text-color);
+}
+
+.tx-params input::placeholder {
+  color: var(--terminal-placeholder-color);
+}
+
+.tx-params-input-left {
+  border-radius: 0 0 0 var(--border-radius);
+}
+
+.tx-params-input-right {
+  border-radius: 0 0 var(--border-radius) 0;
+}
+
+.button-execute {
+  cursor: pointer;
+  margin-top: 16px;
+  padding: 8px;
+
+  border: 0.2rem solid var(--main-text-color);
+  border-radius: 2rem;
+  padding: 0.5rem 2rem;
+  text-transform: uppercase;
+  background: transparent;
+  color: var(--main-text-color);
+  font-family: "Share Tech Mono", monospace;
+}
+
+.button-execute.off {
+  opacity: .3;
+  cursor: not-allowed;
+}
+
+.button-execute.on {
+  opacity: .7;
+  box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem #ff6633,
+  0 0 0.8rem #bf4f2a, inset 0 0 1.3rem #c64f27;
+  transition: all ease .5s;
+}
+
+.button-execute.on:hover {
+  opacity: 1;
+  box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem #ff6633,
+  0 0 0.8rem #ff6633, 0 0 2.8rem #ff6633, inset 0 0 1.3rem #ff6633;
+}
+
+.results {
+  margin-top: 50px;
+}
+
+.container-terminal {
+  background: var(--terminal-bg-color);
+  border: 1px solid var(--terminal-border-color);
+  padding: var(--terminal-padding);
+  text-align: left;
+  width: var(--terminal-width);
+  max-width: var(--terminal-max-width);
+  overflow-wrap: break-word;
+}
+
+.container-terminal.top{border-radius: var(--border-radius) var(--border-radius) 0 0;}
+.container-terminal.bottom{
+  border-radius: 0 0 var(--border-radius) var(--border-radius);
+  margin-top: 16px;
+}
+
+.container-terminal h3 {
+  font-size: 13px;
+  margin-bottom: 0;
+  color: var(--chisel-green);
+}
+
+.container-terminal p {
+  font-size: 13px;
+  margin-top: 0;
+}
+
+.container-terminal ul {
+  padding: 0;
+  margin-bottom: 0;
+  margin-top: 0;
+  list-style-type: none;
+}
+
+.container-terminal li {
+  font-size: 13px;
+  padding: 0;
+  margin-bottom: 0;
+  margin-top: 0;
+  list-style-type: none;
+}
+
+.note {
+  font-size: 10px;
+  margin-top: 4px;
+  color:#808080;
+}
+
+.chisel-green{color: var(--chisel-green);}
+.chisel-yellow{color: var(--chisel-yellow);}
+.chisel-cyan{color: var(--chisel-cyan);}
+
+footer{
+  text-align: center;
+  margin-top: 80px;
+}
+
+footer a {
+  display: inline-block;
+  padding: 8px 16px;
+  opacity: .3;
+  transition: all ease .2s;
+}
+
+footer a:hover {
+  animation: flicker 2s forwards;
+}
+
+@keyframes flicker {
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+    filter: drop-shadow(0px 0px 12px rgb(21, 227, 221));
+    opacity: 1;
+  }
+  15%, 20%, 24% {       
+    filter: none;
+    opacity: .3;
+  }
+}
