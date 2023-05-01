@@ -1,0 +1,56 @@
+Arguments: 
+  /home/pranesh/.nvm/versions/node/v16.15.1/bin/node /home/pranesh/.yarn/bin/yarn.js global bin
+
+PATH: 
+  /home/pranesh/.local/bin:/home/pranesh/.nvm/versions/node/v16.15.1/bin:/home/pranesh/.nvm/versions/node/v16.15.1/bin:/home/pranesh/.yarn/bin:/home/pranesh/.config/yarn/global/node_modules/.bin:/usr/local/bin:/home/pranesh/.local/bin:/home/pranesh/.nvm/versions/node/v14.17.6/bin:/home/pranesh/.nix-profile/bin:/home/pranesh/.local/bin:/home/pranesh/.yarn/bin:/home/pranesh/.config/yarn/global/node_modules/.bin:/usr/local/bin:/home/pranesh/.local/bin:/home/pranesh/.nvm/versions/node/v14.17.6/bin:/home/pranesh/.nix-profile/bin:/home/pranesh/.cargo/bin:/home/pranesh/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/pranesh/.foundry/bin:/home/pranesh/.huff/bin:/home/pranesh/.protostar/dist/protostar:/home/pranesh/.foundry/bin:/home/pranesh/.huff/bin:/home/pranesh/.protostar/dist/protostar
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  16.15.1
+
+Platform: 
+  linux x64
+
+Trace: 
+  SyntaxError: /home/pranesh/projects/yul-to-huff/package.json: Unexpected token } in JSON at position 370
+      at JSON.parse (<anonymous>)
+      at /home/pranesh/.yarn/lib/cli.js:1629:59
+      at Generator.next (<anonymous>)
+      at step (/home/pranesh/.yarn/lib/cli.js:310:30)
+      at /home/pranesh/.yarn/lib/cli.js:321:13
+
+npm manifest: 
+  {
+    "name": "yul-to-huff",
+    "version": "0.0.1",
+    "author": "PraneshASP",
+    "private": true,
+    "scripts": {
+      "dev": "vite",
+      "build": "tsc && vite build",
+      "preview": "vite preview"
+    },
+    "dependencies": {
+      "buffer": "^6.0.3",
+      "ethers": "^5.7.2",
+      "process": "^0.11.10",
+      "react": "^18.2.0",
+      "react-dom": "^18.2.0",
+      "util": "^0.12.4",
+     },
+    "devDependencies": {
+      "@types/react": "^18.0.9",
+      "@types/react-dom": "^18.0.3",
+      "@vitejs/plugin-react": "^2.1.0",
+      "typescript": "^4.9.4",
+      "vite": "^3.1.8"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
