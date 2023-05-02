@@ -122,7 +122,7 @@ export function App() {
       </div>
 
       <footer>
-      <i><p className="note"> The code for the interface was taken from the <a href="https://vevm-demo.vercel.app/">vEVM</a> project ❤️ </p></i>
+      <p className="note"> The code for the interface was taken from the vEVM (https://vevm-demo.vercel.app) project ❤️ </p>
         <a href="https://www.evm.codes/?fork=merge" target={"_blank"}>
           <img height="25" src="logo-evmcodes-light.png" alt="evm codes"></img>
         </a>
