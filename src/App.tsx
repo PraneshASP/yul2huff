@@ -32,14 +32,14 @@ export function App() {
 
   useEffect(() => {
     // Update the height of the textarea based on its content
-    const textarea = textareaRef.current;
+    const textarea = (textareaRef.current as unknown) as HTMLTextAreaElement;
     if (textarea) {
       textarea.style.height = "auto";
       textarea.style.height = `${textarea.scrollHeight}px`;
     }
   }, [huffOutput]);
 
-  function isOperator(c) {
+  function isOperator(c:string) {
     return (
       !(c >= "a" && c <= "z") &&
       !(c >= "0" && c <= "9") &&
@@ -61,7 +61,7 @@ export function App() {
         !isOperator(yulExpressionArray[c]) &&
         opcodes.indexOf(yulExpressionArray[c]) == -1
       ) {
-        if (isNaN(yulExpressionArray[c])) {
+        if (isNaN(Number(yulExpressionArray[c]))) {
           yulExpressionArrayCleaned.push(yulExpressionArray[c]);
         } else {
           yulExpressionArrayCleaned.push(
@@ -97,7 +97,6 @@ export function App() {
           <textarea
             className="textarea-terminal"
             value={yulInput}
-            type="text"
             placeholder="Try 'add(1,2)'"
             onChange={(e) => setYulInput(e.target.value)}
           />
