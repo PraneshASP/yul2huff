@@ -4,7 +4,7 @@
   "author": "PraneshASP",
   "private": true,
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --host",
     "build": "tsc && vite build",
     "preview": "vite preview"
   },
@@ -15,7 +15,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "util": "^0.12.4"
-   },
+  },
   "devDependencies": {
     "@types/react": "^18.0.9",
     "@types/react-dom": "^18.0.3",
