@@ -142,6 +142,9 @@ export function App() {
         >
           <img height="30" src="huff-logo.png" alt="Huff"></img>
         </a>
+        <a href="https://github.com/PraneshASP/yul2huff" target={"_blank"}>
+          <img height="25" src="logo-github-light.png" alt="GitHub"></img>
+        </a>
       </footer>
     </>
   );
