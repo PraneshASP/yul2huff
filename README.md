@@ -1,10 +1,14 @@
 # YulExp2Huff • [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT) [![Vite.js](https://img.shields.io/badge/Vite.js-3.1.18-brightgreen)](https://vitejs.dev/)
 
-<div align="center">
-  <img alt="yul-2-huff-demo" src="./assets/yul2huff-demo.gif" width="500"> 
-</div>
+
 
 YulExp2Huff is a tool designed to convert simple Yul arithmetic expressions to their equivalent Huff code. The output generated is not currently optimized, and there is plenty of room for improvement. No input validations are in place atm since this tool has to support variables in Yul expressions as well. So invalid input will simply result in invalid output. 
+
+<div align="center">
+  <img alt="yul-2-huff-demo" src="./assets/yul2huff-demo.gif" width="600"> 
+</div> 
+
+---
 
 ## Motivation
 
