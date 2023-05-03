@@ -1,6 +1,11 @@
 # YulExp2Huff • [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT) [![Vite.js](https://img.shields.io/badge/Vite.js-3.1.18-brightgreen)](https://vitejs.dev/)
 
-YulExp2Huff is a tool designed to convert simple Yul arithmetic expressions to their equivalent Huff code. The output generated is not currently optimized, and there is plenty of room for improvement.
+<div align="center">
+  <video width="500" height="500" controls>
+  <source src="./assets/yul2huff-demo.mp4" type="video/mp4">
+</div>
+
+YulExp2Huff is a tool designed to convert simple Yul arithmetic expressions to their equivalent Huff code. The output generated is not currently optimized, and there is plenty of room for improvement. No input validations are in place atm since this tool has to support variables in Yul expressions as well. So invalid input will simply result in invalid output. 
 
 ## Motivation
 
@@ -11,6 +16,13 @@ I felt that the nested Yul statements are quite difficult to read. So I ended up
 To use the application, simply enter a Yul expression into the input field and click the "Convert" button. The resulting Huff code will be displayed in the output field below.
 
 > Note: This app is still in a very early stage. This project will be developed during my free time, so expect progress to be slow.
+
+## TODO:
+- [ ] Add input validations
+- [ ] Stack comments in output?
+- [ ] Support more Opcodes
+- [ ] Transpile Yul blocks to Huff
+
 
 ## Running locally
 
